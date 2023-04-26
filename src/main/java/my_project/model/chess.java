@@ -24,6 +24,6 @@ public class chess extends GraphicalObject {
         drawTool.setCurrentColor(new Color(0,0,0));
         drawTool.drawFilledRectangle(x, y, width, height);
         drawTool.setCurrentColor(new Color(255, 255, 255));
-        drawTool.drawFilledRectangle();
+        //drawTool.drawFilledRectangle();
     }
 }
