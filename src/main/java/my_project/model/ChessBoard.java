@@ -13,15 +13,19 @@ public class ChessBoard extends GraphicalObject {
     public ChessBoard(int x, int y){
         this.x = x;
         this.y = y;
-        width = 50;
-        height = 50;
+        width = 100;
+        height = 100;
     }
 
     public void draw(DrawTool drawTool){
         drawTool.setCurrentColor(new Color(0, 0, 0));
-        for ( int i = 0; i < 4; i++){
-            for (int j = 0; j < 4; j++){
-                drawTool.drawFilledRectangle(x,y,i*width,j*height);
+        for ( int i = 0; i < 8; i++){
+            for (int j = 0; j < 8; j++){
+                if(i % 2 == 0) {
+                    drawTool.drawFilledRectangle(j*200,i*100,width,height);
+                } else {
+                    drawTool.drawFilledRectangle(100+ j*200,i*100,width,height);
+                }
             }
         }
     }
